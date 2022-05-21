@@ -24,10 +24,7 @@ export default function Displ(props) {
   });
 
   renderer.setClearColor("#87CEEB");
-  renderer.setSize(
-    props.size * window.innerWidth,
-    props.size * window.innerHeight
-  );
+  renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.shadowMap.enabled = true;
   renderer.gammaOuput = true;
@@ -37,6 +34,7 @@ export default function Displ(props) {
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
   var file = props.file;
+
   const objLoader = new GLTFLoader();
   objLoader.load(
     file,
@@ -61,10 +59,7 @@ export default function Displ(props) {
   function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(
-      props.size * window.innerWidth,
-      props.size * window.innerHeight
-    );
+    renderer.setSize(window.innerWidth, window.innerHeight);
     render();
   }
 
