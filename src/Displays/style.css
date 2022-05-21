@@ -15,8 +15,9 @@
 
 .inputfile+label {
     font-size: 1.25em;
-    font-weight: 700;
+    font-weight: 700; 
     color: white;
+    float: right;
     background-color: black;
     display: inline-block;
 }
@@ -30,20 +31,20 @@
     cursor: pointer;
 }
 
-.toprow {
-    margin-left: 95%;
-}
 
+.backdiv {
+
+    background-color: #87CEEB;
+}
 .backbutton {
     margin-left: 96.9%;
     background-color: red;
+   
     cursor: pointer;
 
 }
 
-.backdiv {
-    background-color: #87CEEB;
-}
+
 
 .upperdiv {
     width: 100%;
